@@ -1,8 +1,9 @@
 const express = require ('express');
+const pedidosController = require('./controller/pedidosController');
 
 const router = express.Router();
 
-// router.get('/pedidos', (req,res) => res.status(200).send('deu certo'));
+router.get('/pedidos', pedidosController.getAll);
 
 
 module.exports = router;
